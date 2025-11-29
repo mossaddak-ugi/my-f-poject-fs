@@ -1,4 +1,6 @@
 import Card from "./components/cards";
+import Form from "./components/forms";
+
 import { useState, useEffect } from "react";
 
 function App() {
@@ -18,9 +20,9 @@ function App() {
 
   return (
     <div className="p-5">
-      <h4 className="text-center">New Cards</h4>
       <hr />
       <Card card_contents={cards} />
+      <Form />
     </div>
   );
 }
