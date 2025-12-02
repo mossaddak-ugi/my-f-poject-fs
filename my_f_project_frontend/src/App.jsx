@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Card from "./components/cards";
 import Form from "./components/forms";
+import Pagination from "./components/paginations";
 
 function App() {
   const [fileItemQuote, setFileItemQuote] = useState([]);
@@ -24,9 +25,13 @@ function App() {
       <div className="mb-5">
         <Form onSuccess={fetchFiles} />
       </div>
-
       <hr />
-      <Card card_contents={fileItemQuote} />
+      <div>
+        <Card card_contents={fileItemQuote} />
+      </div>
+      <div className="d-flex justify-content-end">
+        <Pagination />
+      </div>
     </div>
   );
 }
